@@ -78,10 +78,6 @@ variable "availability_zones" {
   description = "A list of EC2 Availability Zones that instances in the DB cluster can be created in."
 }
 
-variable "instance_azs" {
-  type    = list(string)
-  default = ["us-east-1a", "us-east-1b", "us-east-1c"]
-}
 
 variable "backup_retention_period" {
   type        = number

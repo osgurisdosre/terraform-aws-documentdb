@@ -161,7 +161,6 @@ To-do:
 | <a name="input_family"></a> [family](#input\_family) | The family of the documentDB cluster parameter group. | `string` | `"docdb4.0"` | no |
 | <a name="input_final_snapshot_identifier"></a> [final\_snapshot\_identifier](#input\_final\_snapshot\_identifier) | The name of your final DB snapshot when this DB cluster is deleted. If omitted, no final snapshot will be made. | `string` | `null` | no |
 | <a name="input_identifier_prefix"></a> [identifier\_prefix](#input\_identifier\_prefix) | Creates a unique identifier beginning with the specified prefix. | `string` | `null` | no |
-| <a name="input_instance_azs"></a> [instance\_azs](#input\_instance\_azs) | n/a | `list(string)` | <pre>[<br>  "us-east-1a",<br>  "us-east-1b",<br>  "us-east-1c"<br>]</pre> | no |
 | <a name="input_instance_class"></a> [instance\_class](#input\_instance\_class) | The instance class to use. | `string` | `null` | no |
 | <a name="input_kms_key_id"></a> [kms\_key\_id](#input\_kms\_key\_id) | The ARN for the KMS encryption key. | `string` | `null` | no |
 | <a name="input_master_password"></a> [master\_password](#input\_master\_password) | Password for the master DB user. | `string` | `null` | no |
