@@ -33,7 +33,7 @@ module "docdb_parameter_group" {
 
   name        = var.cluster_identifier
   family      = var.family
-  description = "${var.parameter_description}+${var.cluster_identifier}"
+  description = "${var.parameter_description} ${var.cluster_identifier}"
   parameters  = var.parameters
 }
 
@@ -66,8 +66,7 @@ resource "aws_docdb_cluster" "this" {
 }
 
 resource "aws_docdb_cluster_instance" "this" {
-  count = var.create_db ? var.cluster_size : 0
-  #for_each = var.create_db && var.cluster_size == length(var.instance_azs) ? {for i, az in var.instance_azs: i => az} : {}
+  count                           = var.create_db ? var.cluster_size : 0
   identifier                      = "${var.cluster_identifier}-${count.index}"
   cluster_identifier              = aws_docdb_cluster.this[0].id
   instance_class                  = var.instance_class
