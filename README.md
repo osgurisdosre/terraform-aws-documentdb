@@ -190,3 +190,10 @@ To-do:
 | <a name="output_db_instance_endpoint_reader"></a> [db\_instance\_endpoint\_reader](#output\_db\_instance\_endpoint\_reader) | The DNS address of the DocDB Cluster |
 | <a name="output_db_instance_password"></a> [db\_instance\_password](#output\_db\_instance\_password) | The database password (this password may be old, because Terraform doesn't track it after initial creation) |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
+## Authors
+
+Module is maintained by [Emidio Neto](https://github.com/emdneto), [Leonardo Jardim](https://github.com/leojaardim) and [Yuri Azeredo](https://github.com/yuriazeredo)
+## License
+
+Apache 2 Licensed. See [LICENSE](https://github.com/osgurisdosre/terraform-aws-documentdb/blob/main/LICENSE) for full details.
