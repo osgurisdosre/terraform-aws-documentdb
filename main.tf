@@ -24,6 +24,7 @@ module "docdb_subnet_group" {
   subnet_ids  = var.subnet_ids
   description = var.subnet_description
   name_prefix = var.sg_name_prefix
+  tags        = var.tags
 }
 
 module "docdb_parameter_group" {
@@ -35,6 +36,7 @@ module "docdb_parameter_group" {
   family      = var.family
   description = "${var.parameter_description} ${var.cluster_identifier}"
   parameters  = var.parameters
+  tags        = var.tags
 }
 
 resource "aws_docdb_cluster" "this" {
@@ -60,9 +62,12 @@ resource "aws_docdb_cluster" "this" {
   skip_final_snapshot             = var.skip_final_snapshot
   deletion_protection             = var.deletion_protection
   apply_immediately               = var.apply_immediately
-  tags = {
-    "Engine" = var.engine
-  }
+  tags = merge(
+    var.tags,
+    {
+      "Engine" = var.engine
+    }
+  )
 }
 
 resource "aws_docdb_cluster_instance" "this" {
@@ -78,7 +83,10 @@ resource "aws_docdb_cluster_instance" "this" {
   preferred_maintenance_window    = var.preferred_maintenance_window
   promotion_tier                  = var.promotion_tier
   apply_immediately               = var.apply_immediately
-  tags = {
-    "Engine" = var.engine
-  }
+  tags = merge(
+    var.tags,
+    {
+      "Engine" = var.engine
+    }
+  )
 }

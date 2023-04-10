@@ -181,6 +181,7 @@ To-do:
 | <a name="input_subnet_description"></a> [subnet\_description](#input\_subnet\_description) | Allowed subnets for DB cluster instances. | `string` | `null` | no |
 | <a name="input_subnet_ids"></a> [subnet\_ids](#input\_subnet\_ids) | A list of VPC subnet IDs. | `list(string)` | `[]` | no |
 | <a name="input_vpc_security_group_ids"></a> [vpc\_security\_group\_ids](#input\_vpc\_security\_group\_ids) | List of VPC security groups to associate with the Cluster. | `list(string)` | n/a | yes |
+| <a name="input_tags"></a> [vpc\_tags](#input\_tags) | A map of tags to add to all resources. | `map(string)` | `{}` | no |
 
 ## Outputs
 
