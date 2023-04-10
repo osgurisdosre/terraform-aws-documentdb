@@ -75,6 +75,7 @@ variable "apply_immediately" {
 
 variable "availability_zones" {
   type        = list(string)
+  default     = null
   description = "A list of EC2 Availability Zones that instances in the DB cluster can be created in."
 }
 
