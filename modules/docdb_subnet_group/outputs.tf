@@ -4,6 +4,6 @@ output "db_subnet_group_id" {
 }
 
 output "db_subnet_group_arn" {
-  description = "ARN"
+  description = "The db subnet group ARN"
   value       = try(aws_docdb_subnet_group.this[0].arn, "")
 }
