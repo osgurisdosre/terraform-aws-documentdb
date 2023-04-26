@@ -4,4 +4,5 @@ resource "aws_docdb_subnet_group" "this" {
   name        = var.name
   subnet_ids  = var.subnet_ids
   description = var.description
+  tags        = var.tags
 }

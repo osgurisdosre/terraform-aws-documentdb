@@ -75,6 +75,7 @@ variable "apply_immediately" {
 
 variable "availability_zones" {
   type        = list(string)
+  default     = null
   description = "A list of EC2 Availability Zones that instances in the DB cluster can be created in."
 }
 
@@ -239,4 +240,10 @@ variable "parameters" {
   type        = list(map(string))
   default     = []
   description = "List of DB parameters to apply."
+}
+
+variable "tags" {
+  type        = map(string)
+  default     = {}
+  description = "A map of tags to add to all resources"
 }

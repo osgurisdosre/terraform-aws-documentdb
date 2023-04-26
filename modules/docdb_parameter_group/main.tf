@@ -3,6 +3,7 @@ resource "aws_docdb_cluster_parameter_group" "this" {
   family      = var.family
   name        = var.name
   description = var.description
+  tags        = var.tags
 
   dynamic "parameter" {
     for_each = var.parameters
